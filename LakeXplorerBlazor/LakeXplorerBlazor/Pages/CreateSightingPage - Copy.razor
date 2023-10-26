@@ -1,0 +1,41 @@
+﻿@page "/lake/{LakeId}/create-sighting"
+@inject HttpClient HttpClient
+@inject NavigationManager NavigationManager
+@using LakeXplorerBlazor.Data
+
+<h2>Create a New Sighting for Lake ID: @LakeId</h2>
+
+<EditForm Model="@newSighting" OnValidSubmit="CreateSighting">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <!-- Input fields for Longitude, Latitude, Image URL, Fun Fact -->
+    <!-- ... -->
+
+    <button type="submit" class="btn btn-primary">Create Sighting</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int LakeId { get; set; }
+    private LakeSightingDto newSighting = new LakeSightingDto();
+
+    private async Task CreateSighting()
+    {
+        // Set LakeId for the new sighting
+        newSighting.LakeId = LakeId;
+
+        // Send POST request to API to create the sighting
+        var response = await HttpClient.PostAsJsonAsync("api/lake-sightings", newSighting);
+        if (response.IsSuccessStatusCode)
+        {
+            // Redirect to lake sightings page after successful creation
+            NavigationManager.NavigateTo($"/lake/{LakeId}/sightings");
+        }
+        else
+        {
+            // Handle creation error
+            // You can show an error message to the user
+        }
+    }
+}

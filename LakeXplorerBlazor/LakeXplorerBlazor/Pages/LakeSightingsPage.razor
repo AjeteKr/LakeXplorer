@@ -1,0 +1,64 @@
+﻿@page "/lake/{LakeId}/sightings"
+@inject HttpClient HttpClient
+@inject NavigationManager NavigationManager
+
+<h2>Sightings for Lake ID: @LakeId</h2>
+
+@if (LakeSightings != null && LakeSightings.Any())
+{
+    <div class="sighting-container">
+        @foreach (var sighting in LakeSightings)
+        {
+            <div class="sighting">
+                <p>Longitude: @sighting.Longitude</p>
+                <p>Latitude: @sighting.Latitude</p>
+                @if (!string.IsNullOrEmpty(sighting.Image))
+                {
+                    <img src="@sighting.Image" alt="Sighting Image" />
+                }
+                <p>Fun Fact: @sighting.FunFact</p>
+                <button @onclick="() => DeleteSighting(sighting.Id)">Delete</button> <!-- Delete button for each sighting -->
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No sightings available for Lake ID: @LakeId.</p>
+}
+
+
+
+@using LakeXplorerBlazor.Data
+
+@code {
+    [Parameter]
+    public int LakeId { get; set; }
+    private List<LakeSightingDto> LakeSightings { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Fetch lake sightings based on LakeId from API
+        LakeSightings = await HttpClient.GetFromJsonAsync<List<LakeSightingDto>>($"api/lake-sightings/{LakeId}");
+    }
+
+    private async Task DeleteSighting(int sightingId)
+    {
+        // Send DELETE request to API to delete the sighting
+        var response = await HttpClient.DeleteAsync($"api/lake-sightings/{sightingId}");
+        if (response.IsSuccessStatusCode)
+        {
+            // Refresh the list of sightings after deletion
+            LakeSightings = await HttpClient.GetFromJsonAsync<List<LakeSightingDto>>($"api/lake-sightings/{LakeId}");
+            StateHasChanged(); // Force Blazor to re-render the component
+        }
+        else
+        {
+            // Handle deletion error
+            // You can show an error message to the user
+        }
+    }
+
+    // CSS styles for sightings
+    // ...
+}

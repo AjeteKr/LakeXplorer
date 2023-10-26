@@ -1,0 +1,58 @@
+﻿@page "/create-lake"
+@inject IApiService apiService
+@inject NavigationManager NavigationManager
+@using LakeXplorerBlazor.Data
+
+<h2>Create a New Lake</h2>
+
+<InputFile OnChange="@LoadFiles" />
+
+<Form Model="@newLake" OnValidSubmit="CreateLake">
+    
+    <div class="form-group">
+        <label for="longitude">Name:</label>
+        <InputText id="longitude" @bind-Value="newLake.Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="latitude">Description:</label>
+        <InputText id="latitude" @bind-Value="newLake.Description" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Lake</button>
+</Form>
+
+@code {
+    private LakeDto newLake = new LakeDto();
+    private string errorMessage = string.Empty;
+
+    // This method handles file selection and converts the selected file to base64 string.
+    private async void LoadFiles(InputFileChangeEventArgs e)
+    {
+        using (var str = e.File.OpenReadStream())
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                await str.CopyToAsync(ms);
+                newLake.Image = Convert.ToBase64String(ms.ToArray());
+            }
+        }
+    }
+
+    // This method is called when the form is submitted to create a new lake.
+    private async Task CreateLake()
+    {
+        var response = await apiService.HttpPOST<LakeDto>("api/Lakes/CreateLake", newLake);
+        if (response != null)
+        {
+            // Redirect to the lake sightings page after successful creation
+            NavigationManager.NavigateTo("/");
+        }
+        else
+        {
+            // Handle creation error
+            // You can show an error message to the user
+            errorMessage = "An error occurred while creating the lake.";
+        }
+    }
+}

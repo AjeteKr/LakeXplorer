@@ -1,0 +1,54 @@
+﻿@page "/lake/{Id:int}"
+@using LakeXplorerBlazor.Data
+@inject HttpClient HttpClient
+
+<h3>View Sightings for Lake @Id</h3>
+
+@if (LakeSightingDto != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Longitude</th>
+                <th>Latitude</th>
+                <th>Image</th>
+                <th>Fun Fact</th>
+                <th>User ID</th>
+                <th>Lake ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@LakeSightingDto.Id</td>
+                <td>@LakeSightingDto.Longitude</td>
+                <td>@LakeSightingDto.Latitude</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(LakeSightingDto.Image))
+                    {
+                        <img src="@LakeSightingDto.Image" alt="Sighting Image" style="max-width: 100px; max-height: 100px;" />
+                    }
+                </td>
+                <td>@LakeSightingDto.FunFact</td>
+                <td>@LakeSightingDto.UserId</td>
+                <td>@LakeSightingDto.LakeId</td>
+            </tr>
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No sightings available for this lake.</p>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private LakeSightingDto LakeSightingDto { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        LakeSightingDto = await HttpClient.GetFromJsonAsync<LakeSightingDto>($"api/Lakes/{Id}");
+    }
+}
