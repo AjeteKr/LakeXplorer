@@ -1,38 +1,41 @@
 ﻿@page "/lake/{Id:int}"
 @using LakeXplorerBlazor.Data
-@inject HttpClient HttpClient
+@inject IApiService ApiService
 
 <h3>View Sightings for Lake @Id</h3>
 
-@if (LakeSightingDto != null)
+@if (LakeSightings != null && LakeSightings.Any())
 {
     <table class="table">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Id</th>
                 <th>Longitude</th>
                 <th>Latitude</th>
                 <th>Image</th>
                 <th>Fun Fact</th>
-                <th>User ID</th>
-                <th>Lake ID</th>
+                <th>User Id</th>
+                <th>Lake Id</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>@LakeSightingDto.Id</td>
-                <td>@LakeSightingDto.Longitude</td>
-                <td>@LakeSightingDto.Latitude</td>
-                <td>
-                    @if (!string.IsNullOrEmpty(LakeSightingDto.Image))
-                    {
-                        <img src="@LakeSightingDto.Image" alt="Sighting Image" style="max-width: 100px; max-height: 100px;" />
-                    }
-                </td>
-                <td>@LakeSightingDto.FunFact</td>
-                <td>@LakeSightingDto.UserId</td>
-                <td>@LakeSightingDto.LakeId</td>
-            </tr>
+            @foreach (var sighting in LakeSightings)
+            {
+                <tr>
+                    <td>@sighting.Id</td>
+                    <td>@sighting.Longitude</td>
+                    <td>@sighting.Latitude</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(sighting.Image))
+                        {
+                            <img src="@sighting.Image" alt="Sighting Image" style="max-width: 100px; max-height: 100px;" />
+                        }
+                    </td>
+                    <td>@sighting.FunFact</td>
+                    <td>@sighting.UserId</td>
+                    <td>@sighting.LakeId</td>
+                </tr>
+            }
         </tbody>
     </table>
 }
@@ -44,11 +47,14 @@ else
 @code {
     [Parameter]
     public int Id { get; set; }
-
     private LakeSightingDto LakeSightingDto { get; set; }
+
+
+    private List<LakeSightingDto> LakeSightings { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        LakeSightingDto = await HttpClient.GetFromJsonAsync<LakeSightingDto>($"api/Lakes/{Id}");
+        LakeSightingDto = await ApiService.HttpGET<LakeSightingDto>($"api/Lakes/{Id}");
     }
+
 }

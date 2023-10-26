@@ -11,6 +11,5 @@
         public string FunFact { get; set; }
         public int UserId { get; set; }
         public int LakeId { get; set; }
-        public bool LikedByUser { get; set; }
     }
 }

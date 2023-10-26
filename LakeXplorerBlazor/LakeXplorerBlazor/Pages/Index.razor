@@ -10,101 +10,76 @@
 @if (IsAuthenticated)
 {
     <p>Hello, @Username! You are logged in.</p>
-
-    @if (Lakes != null && Lakes.Any())
-    {
-        <h2>Available Lakes</h2>
-        <div class="card-container">
-            @foreach (var lake in Lakes)
-            {
-                <div class="card">
-                    @if (!string.IsNullOrEmpty(lake.Image))
-                    {
-                        <img src="data:image/jpg;base64,@lake.Image" alt="Lake Image" />
-                    }
-                    <div class="card-body">
-                        <h3 class="card-title">@lake.Name</h3>
-                        <p class="card-description">@lake.Description</p>
-                        <a href="lake/@lake.Id">View Sightings</a>
-                    </div>
-                </div>
-            }
-        </div>
-    }
-    else
-    {
-        <p>No lakes available. Check back later for updates.</p>
-    }
 }
 else
 {
     <p>You are not logged in. Please <a href="login">log in</a> to explore lakes and sightings.</p>
-
-    @if (Lakes != null && Lakes.Any())
-    {
-        <h2>Available Lakes</h2>
-        <div class="card-container">
-            @foreach (var lake in Lakes)
-            {
-                <div class="card">
-                    @if (!string.IsNullOrEmpty(lake.Image))
-                    {
-                        <img src="data:image/jpg;base64,@lake.Image" alt="Lake Image" />
-                    }
-                    <div class="card-body">
-                        <h3 class="card-title">@lake.Name</h3>
-                        <p class="card-description">@lake.Description</p>
-                        <a href="lake/@lake.Id">View Sightings</a>
-                    </div>
-                </div>
-            }
-        </div>
-    }
-    else
-    {
-        <p>No lakes available. Check back later for updates.</p>
-    }
 }
 
-<style>
-    .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
+@if (Lakes != null && Lakes.Any())
+{
+    <h2>Available Lakes</h2>
+    <div class="card-container">
+        @foreach (var lake in Lakes)
+        {
+            <div class="card">
+                @if (!string.IsNullOrEmpty(lake.Image))
+                {
+                    <img src="data:image/jpg;base64,@lake.Image" alt="Lake Image" />
+                }
+                <div class="card-body">
+                    <h3 class="card-title">@lake.Name</h3>
+                    <p class="card-description">@lake.Description</p>
+                    <a href="lake/@lake.Id">View Sightings</a>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No lakes available. Check back later for updates.</p>
+}
 
-    .card {
-        width: 300px;
-        background-color: #f5f5f5;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-    }
-
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-    .card-body {
-        padding: 16px;
-    }
+        .card {
+            width: 300px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
 
-    .card-title {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
+            .card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
 
-    .card-description {
-        font-size: 14px;
-        color: #555555;
-    }
-</style>
+        .card-body {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #555555;
+        }
+    </style>
+
 
 @code {
-    // Kontrollo nese nje string eshte Base64 i vlefshem
     private bool IsBase64String(string base64String)
     {
         try
@@ -124,13 +99,10 @@ else
     private int PageSize = 9;
     private int CurrentPage = 1;
 
-    // Metoda per te ngarkuar faqen aktuale
     private void LoadCurrentPage()
     {
         Lakes = Lakes.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
     }
-
-    // Metoda per te ndryshuar faqen kur ndryshon numri i faqes
     private void OnPageChange(int newPage)
     {
         CurrentPage = newPage;
@@ -139,15 +111,13 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        // Kontrollo statusin e autentikimit
         var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
         IsAuthenticated = authenticationState?.User?.Identity?.IsAuthenticated ?? false;
+
         if (IsAuthenticated)
         {
             var user = authenticationState.User;
             Username = user.FindFirst(c => c.Type == ClaimTypes.Name)?.Value;
-
-            // Ngarko listen e liqeneve
             Lakes = await ApiService.HttpGET<List<LakeDto>>("api/lakes");
         }
     }
