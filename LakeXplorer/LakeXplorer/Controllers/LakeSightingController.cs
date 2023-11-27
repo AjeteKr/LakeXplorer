@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 
 namespace LakeXplorer.Controllers
 {
@@ -13,19 +15,22 @@ namespace LakeXplorer.Controllers
     {
         private readonly ILogger<LakeSightingsController> _logger;
         private readonly IRepository<LakeSightings> _repository;
+        private Cloudinary cloudinary;
 
         public LakeSightingsController(ILogger<LakeSightingsController> logger, IRepository<LakeSightings> repository)
         {
             _logger = logger;
             _repository = repository;
+
+            Account account = new Account(
+                "djiicjy1v",
+                "417365291149721",
+                "g32YBH42nhxvoL4654d9sqBEpKk"
+            );
+
+            cloudinary = new Cloudinary(account);
         }
 
-
-        /// <summary>
-        /// Retrieves a single lake sighting by its ID.
-        /// </summary>
-        /// <param name="id">The ID of the lake sighting to retrieve.</param>
-        /// <returns>Returns 404 Not Found if the lake sighting does not exist, or 200 OK with the lake sighting information if found.</returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetLakeSighting(int id)
         {
@@ -38,11 +43,6 @@ namespace LakeXplorer.Controllers
             return Ok(sighting);
         }
 
-        /// <summary>
-        /// Creates a new lake sighting with the provided data.
-        /// </summary>
-        /// <param name="newSighting">The LakeSightings object containing lake sighting data to create.</param>
-        /// <returns>Returns 400 Bad Request if the data is invalid, or 201 Created with the created lake sighting information if successful. Returns 500 Internal Server Error if an exception occurs.</returns>
         [HttpPost]
         public async Task<IActionResult> CreateLakeSighting([FromBody] LakeSightings newSighting)
         {
@@ -53,6 +53,14 @@ namespace LakeXplorer.Controllers
 
             try
             {
+                var uploadParams = new ImageUploadParams()
+                {
+                    Folder = "newSighting.Image"
+                };
+
+                var uploadResult = await cloudinary.UploadAsync(uploadParams);
+                newSighting.Image = uploadResult.SecureUri.AbsoluteUri; 
+
                 var createdSighting = await _repository.Add(newSighting);
                 return CreatedAtAction(nameof(GetLakeSighting), new { id = createdSighting.Id }, createdSighting);
             }
@@ -63,11 +71,6 @@ namespace LakeXplorer.Controllers
             }
         }
 
-        /// <summary>
-        /// Deletes a lake sighting by its ID.
-        /// </summary>
-        /// <param name="id">The ID of the lake sighting to delete.</param>
-        /// <returns>Returns 204 No Content if the lake sighting is successfully deleted. Returns 500 Internal Server Error if an exception occurs.</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteLakeSighting(int id)
         {
@@ -89,12 +92,6 @@ namespace LakeXplorer.Controllers
             }
         }
 
-        /// <summary>
-        /// Updates an existing lake sighting with the provided data.
-        /// </summary>
-        /// <param name="id">The ID of the lake sighting to update.</param>
-        /// <param name="updatedSighting">The LakeSightings object containing updated lake sighting data.</param>
-        /// <returns>Returns 400 Bad Request if the data is invalid, 404 Not Found if the lake sighting does not exist, or 200 OK with the updated lake sighting information if successful. Returns 500 Internal Server Error if an exception occurs.</returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateLakeSighting(int id, [FromBody] LakeSightings updatedSighting)
         {

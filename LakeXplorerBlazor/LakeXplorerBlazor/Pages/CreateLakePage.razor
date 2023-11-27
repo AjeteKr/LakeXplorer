@@ -2,10 +2,12 @@
 @inject IApiService apiService
 @inject NavigationManager NavigationManager
 @using LakeXplorerBlazor.Data
+@using CloudinaryDotNet;
+@using CloudinaryDotNet.Actions;
 
 <h2>Create a New Lake</h2>
 
-<InputFile OnChange="@LoadFiles" />
+<InputFile OnChange="@UploadToCloudinary" />
 
 <Form Model="@newLake" OnValidSubmit="CreateLake">
     
@@ -23,21 +25,27 @@
 </Form>
 
 @code {
+
+    private Cloudinary cloudinary;
     private LakeDto newLake = new LakeDto();
     private string errorMessage = string.Empty;
 
     // This method handles file selection and converts the selected file to base64 string.
-    private async void LoadFiles(InputFileChangeEventArgs e)
-    {
-        using (var str = e.File.OpenReadStream())
-        {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                await str.CopyToAsync(ms);
-                newLake.Image = Convert.ToBase64String(ms.ToArray());
-            }
-        }
-    }
+    // private async void LoadFiles(InputFileChangeEventArgs e)
+    // {
+    //     using (var str = e.File.OpenReadStream())
+    //     {
+    //         using (MemoryStream ms = new MemoryStream())
+    //         {
+    //             await str.CopyToAsync(ms);
+    //             newLake.Image = Convert.ToBase64String(ms.ToArray());
+    //         }
+    //     }
+    // }
+
+
+
+
 
     // This method is called when the form is submitted to create a new lake.
     private async Task CreateLake()
@@ -45,14 +53,49 @@
         var response = await apiService.HttpPOST<LakeDto>("api/Lakes/CreateLake", newLake);
         if (response != null)
         {
-            // Redirect to the lake sightings page after successful creation
             NavigationManager.NavigateTo("/");
         }
         else
         {
-            // Handle creation error
-            // You can show an error message to the user
             errorMessage = "An error occurred while creating the lake.";
         }
     }
+
+    protected override void OnInitialized()
+    {
+        Account account = new Account(
+            "djiicjy1v",
+            "417365291149721",
+            "g32YBH42nhxvoL4654d9sqBEpKk"
+        );
+
+        cloudinary = new Cloudinary(account);
+    }
+
+
+    private async Task UploadToCloudinary(InputFileChangeEventArgs e)
+    {
+        using (var stream = e.File.OpenReadStream())
+        {
+            var uploadParams = new ImageUploadParams()
+                {
+                    File = new FileDescription(e.File.Name, stream)
+                };
+            var uploadResult = await cloudinary.UploadAsync(uploadParams);
+            Console.WriteLine(uploadResult);
+            if (uploadResult.Error != null)
+            {
+                Console.WriteLine($"Error: {uploadResult.Error.Message}");
+                return;
+            }
+            if (uploadResult.SecureUri == null)
+            {
+                Console.WriteLine("No SecureUri returned from Cloudinary.");
+                return;
+            }
+            var imageUrl = uploadResult.SecureUri.AbsoluteUri;
+            newLake.Image = imageUrl;
+        }
+    }
+
 }

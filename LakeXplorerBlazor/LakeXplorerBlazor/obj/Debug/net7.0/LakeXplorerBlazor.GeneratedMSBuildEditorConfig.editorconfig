@@ -9,65 +9,67 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LakeXplorerBlazor
 build_property.RootNamespace = LakeXplorerBlazor
-build_property.ProjectDir = C:\Users\ajete\OneDrive\Desktop\C#\AlbiSoftProjectInterview\LakeXplorerBlazor\LakeXplorerBlazor\
+build_property.ProjectDir = C:\Users\ajete\OneDrive\Documents\GitHub\LakeXplorerAlbiSoft\LakeXplorerBlazor\LakeXplorerBlazor\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ajete\OneDrive\Desktop\C#\AlbiSoftProjectInterview\LakeXplorerBlazor\LakeXplorerBlazor
+build_property.MSBuildProjectDirectory = C:\Users\ajete\OneDrive\Documents\GitHub\LakeXplorerAlbiSoft\LakeXplorerBlazor\LakeXplorerBlazor
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/App.razor]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/Pages/CreateLakePage.razor]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/Pages/CreateLakePage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlTGFrZVBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/Pages/CreateSightingPage - Copy.razor]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/Pages/CreateSightingPage - Copy.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlU2lnaHRpbmdQYWdlIC0gQ29weS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/Pages/Index.razor]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/Pages/ViewSightingst.razor]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/Pages/ViewSightingst.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1NpZ2h0aW5nc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/Shared/SurveyPrompt.razor]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/_Imports.razor]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/Shared/MainLayout.razor]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-o39seiepbl
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/Shared/NavMenu.razor]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-gzxfjnqmmw
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/Pages/Error.cshtml]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/Pages/Login.cshtml]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/Pages/Logout.cshtml]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/Pages/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/Pages/Register.cshtml]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/Pages/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ajete/OneDrive/Desktop/C\#/AlbiSoftProjectInterview/LakeXplorerBlazor/LakeXplorerBlazor/Pages/_Host.cshtml]
+[C:/Users/ajete/OneDrive/Documents/GitHub/LakeXplorerAlbiSoft/LakeXplorerBlazor/LakeXplorerBlazor/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
