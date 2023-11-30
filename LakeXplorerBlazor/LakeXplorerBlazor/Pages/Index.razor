@@ -3,6 +3,7 @@
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @using LakeXplorerBlazor.Data
 @using System.Security.Claims
+@using CloudinaryDotNet
 
 <PageTitle>LakeXplorer</PageTitle>
 <h1>Welcome to LakeXplorer!</h1>
@@ -23,9 +24,12 @@ else
         @foreach (var lake in Lakes)
         {
             <div class="card">
-                @if (!string.IsNullOrEmpty(lake.Image))
+
+                @if (!string.IsNullOrEmpty(lake.CloudinaryAssetId))
                 {
-                    <img src="data:image/jpg;base64,@lake.Image" alt="Lake Image" />
+
+                    <img src="@($"https://res.cloudinary.com/djiicjy1v/image/upload/v1701366296/Lakes/{lake.CloudinaryAssetId}.jpg")" alt="Lake Image" />
+
                 }
                 <div class="card-body">
                     <h3 class="card-title">@lake.Name</h3>
@@ -40,6 +44,8 @@ else
 {
     <p>No lakes available. Check back later for updates.</p>
 }
+
+
 
     <style>
         .card-container {
@@ -80,25 +86,24 @@ else
 
 
 @code {
-    private bool IsBase64String(string base64String)
-    {
-        try
-        {
-            Convert.FromBase64String(base64String);
-            return true;
-        }
-        catch (FormatException)
-        {
-            return false;
-        }
-    }
-
+    private Cloudinary cloudinary;
     private bool IsAuthenticated = false;
     private string Username;
     private List<LakeDto> Lakes;
     private int PageSize = 9;
     private int CurrentPage = 1;
 
+
+    protected override void OnInitialized()
+    {
+        Account account = new Account(
+            "djiicjy1v",
+            "417365291149721",
+            "g32YBH42nhxvoL4654d9sqBEpKk"
+        );
+
+        cloudinary = new Cloudinary(account);
+    }
     private void LoadCurrentPage()
     {
         Lakes = Lakes.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();

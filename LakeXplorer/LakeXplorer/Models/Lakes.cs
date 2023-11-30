@@ -11,7 +11,9 @@ namespace LakeXplorer.Models
         public string Name { get; set; }
 
         // Gets or sets the image path associated with the lake.
-        public string Image { get; set; }
+
+        [Required]
+        public string CloudinaryAssetId { get; set; }
 
         // Gets or sets the description of the lake.
         public string Description { get; set; }

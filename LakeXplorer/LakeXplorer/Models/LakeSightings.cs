@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace LakeXplorer.Models
 {
 
-    // Represents a sighting of a lake.
     public class LakeSightings : BaseModels
     {
      
@@ -13,10 +12,9 @@ namespace LakeXplorer.Models
         [Required]
         public double Latitude { get; set; }
 
+
         [Required]
-        public string Image { get; set; }
-        //[Required]
-        //public string ImageFile { get; set; }
+        public string CloudinaryAssetId { get; set; }
 
         [Required]
         public string FunFact { get; set; }

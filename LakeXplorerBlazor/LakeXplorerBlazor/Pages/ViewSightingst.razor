@@ -26,9 +26,9 @@
                     <td>@sighting.Longitude</td>
                     <td>@sighting.Latitude</td>
                     <td>
-                        @if (!string.IsNullOrEmpty(sighting.Image))
+                        @if (!string.IsNullOrEmpty(sighting.CloudinaryAssetId))
                         {
-                            <img src="@sighting.Image" alt="Sighting Image" style="max-width: 100px; max-height: 100px;" />
+                            <img src="@($"https://res.cloudinary.com/djiicjy1v/image/upload/{sighting.CloudinaryAssetId}")" alt="Sighting Image" style="max-width: 100px; max-height: 100px;" />
                         }
                     </td>
                     <td>@sighting.FunFact</td>
@@ -47,14 +47,10 @@ else
 @code {
     [Parameter]
     public int Id { get; set; }
-    private LakeSightingDto LakeSightingDto { get; set; }
-
-
     private List<LakeSightingDto> LakeSightings { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        LakeSightingDto = await ApiService.HttpGET<LakeSightingDto>($"api/Lakes/{Id}");
+        LakeSightings = await ApiService.HttpGET<List<LakeSightingDto>>($"api/Lakes/{Id}");
     }
-
 }

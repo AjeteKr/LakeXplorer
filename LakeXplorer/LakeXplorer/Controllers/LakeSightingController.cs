@@ -42,6 +42,29 @@ namespace LakeXplorer.Controllers
 
             return Ok(sighting);
         }
+        [HttpGet("image/{cloudinaryAssetId}")]
+        public async Task<IActionResult> GetImageByCloudinaryAssetId(string cloudinaryAssetId)
+        {
+            try
+            {
+                var result = await cloudinary.GetResourceAsync(cloudinaryAssetId);
+
+                if (result != null)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return NotFound("Image not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting image by Cloudinary Asset ID.");
+                return StatusCode(500, "Internal Server Error: " + ex.Message);
+            }
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> CreateLakeSighting([FromBody] LakeSightings newSighting)
@@ -59,7 +82,7 @@ namespace LakeXplorer.Controllers
                 };
 
                 var uploadResult = await cloudinary.UploadAsync(uploadParams);
-                newSighting.Image = uploadResult.SecureUri.AbsoluteUri; 
+                newSighting.CloudinaryAssetId = uploadResult.PublicId;
 
                 var createdSighting = await _repository.Add(newSighting);
                 return CreatedAtAction(nameof(GetLakeSighting), new { id = createdSighting.Id }, createdSighting);
@@ -110,7 +133,6 @@ namespace LakeXplorer.Controllers
             existingSighting.Latitude = updatedSighting.Latitude;
             existingSighting.UserId = updatedSighting.UserId;
             existingSighting.LakeId = updatedSighting.LakeId;
-            existingSighting.Image = updatedSighting.Image;
             existingSighting.FunFact = updatedSighting.FunFact;
 
             try

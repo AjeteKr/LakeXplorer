@@ -28,38 +28,11 @@
 
     private Cloudinary cloudinary;
     private LakeDto newLake = new LakeDto();
+    private List<LakeDto> Lakes = new List<LakeDto>();
     private string errorMessage = string.Empty;
 
-    // This method handles file selection and converts the selected file to base64 string.
-    // private async void LoadFiles(InputFileChangeEventArgs e)
-    // {
-    //     using (var str = e.File.OpenReadStream())
-    //     {
-    //         using (MemoryStream ms = new MemoryStream())
-    //         {
-    //             await str.CopyToAsync(ms);
-    //             newLake.Image = Convert.ToBase64String(ms.ToArray());
-    //         }
-    //     }
-    // }
+   
 
-
-
-
-
-    // This method is called when the form is submitted to create a new lake.
-    private async Task CreateLake()
-    {
-        var response = await apiService.HttpPOST<LakeDto>("api/Lakes/CreateLake", newLake);
-        if (response != null)
-        {
-            NavigationManager.NavigateTo("/");
-        }
-        else
-        {
-            errorMessage = "An error occurred while creating the lake.";
-        }
-    }
 
     protected override void OnInitialized()
     {
@@ -73,13 +46,15 @@
     }
 
 
+
     private async Task UploadToCloudinary(InputFileChangeEventArgs e)
     {
         using (var stream = e.File.OpenReadStream())
         {
             var uploadParams = new ImageUploadParams()
                 {
-                    File = new FileDescription(e.File.Name, stream)
+                    File = new FileDescription(e.File.Name, stream),
+                    Folder = "Lakes"
                 };
             var uploadResult = await cloudinary.UploadAsync(uploadParams);
             Console.WriteLine(uploadResult);
@@ -93,9 +68,25 @@
                 Console.WriteLine("No SecureUri returned from Cloudinary.");
                 return;
             }
-            var imageUrl = uploadResult.SecureUri.AbsoluteUri;
-            newLake.Image = imageUrl;
+            newLake.CloudinaryAssetId = uploadResult.PublicId;
         }
     }
+
+
+    private async Task CreateLake()
+    {
+        var response = await apiService.HttpPOST<LakeDto>("api/Lakes/CreateLake", newLake);
+        if (response != null)
+        {
+            Lakes.Add(response);
+            NavigationManager.NavigateTo("/");
+        }
+        else
+        {
+            errorMessage = "An error occurred while creating the lake.";
+        }
+    }
+
+
 
 }
