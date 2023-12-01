@@ -9,11 +9,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using CloudinaryDotNet;
-using CloudinaryDotNet.Actions;
-using CloudinaryDotNet;
-using CloudinaryDotNet.Actions;
 
 namespace LakeXplorer.Controllers
 {
@@ -68,6 +63,7 @@ namespace LakeXplorer.Controllers
         }
 
 
+
         [HttpPost("[action]")]
         public async Task<IActionResult> CreateLake([FromBody] LakeDto lake)
         {
@@ -81,7 +77,8 @@ namespace LakeXplorer.Controllers
                 {
                     Name = lake.Name,
                     CloudinaryAssetId = lake.CloudinaryAssetId,
-                    Description = lake.Description
+                    Description = lake.Description,
+                    ImageUrl = $"https://res.cloudinary.com/djiicjy1v/image/upload/Lakes/{lake.CloudinaryAssetId}"
                 };
                 var createdLake = await _repository.Add(newLake);
                 return Ok(createdLake);
@@ -91,6 +88,7 @@ namespace LakeXplorer.Controllers
                 return StatusCode(500, "Internal Server Error: " + ex.Message);
             }
         }
+
 
 
         [HttpDelete("{id}")]

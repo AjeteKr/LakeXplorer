@@ -25,12 +25,12 @@ else
         {
             <div class="card">
 
-                @if (!string.IsNullOrEmpty(lake.CloudinaryAssetId))
+
+                @if (!string.IsNullOrEmpty(lake.ImageUrl))
                 {
-
-                    <img src="@($"https://res.cloudinary.com/djiicjy1v/image/upload/v1701366296/Lakes/{lake.CloudinaryAssetId}.jpg")" alt="Lake Image" />
-
+                    <img src="@lake.ImageUrl" alt="Lake Image" />
                 }
+
                 <div class="card-body">
                     <h3 class="card-title">@lake.Name</h3>
                     <p class="card-description">@lake.Description</p>
@@ -97,10 +97,10 @@ else
     protected override void OnInitialized()
     {
         Account account = new Account(
-            "djiicjy1v",
-            "417365291149721",
-            "g32YBH42nhxvoL4654d9sqBEpKk"
-        );
+                "djiicjy1v",
+                "417365291149721",
+                "g32YBH42nhxvoL4654d9sqBEpKk"
+            );
 
         cloudinary = new Cloudinary(account);
     }

@@ -12,10 +12,13 @@ namespace LakeXplorer.Models
         [Required]
         public double Latitude { get; set; }
 
-
         [Required]
         public string CloudinaryAssetId { get; set; }
 
+
+
+        [Required]
+        public string ImageUrl { get; set; }
         [Required]
         public string FunFact { get; set; }
 
