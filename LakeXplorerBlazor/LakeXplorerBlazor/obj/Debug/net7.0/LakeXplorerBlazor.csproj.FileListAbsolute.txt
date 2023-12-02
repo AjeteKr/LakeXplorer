@@ -88,3 +88,4 @@ C:\Users\ajete\OneDrive\Documents\GitHub\LakeXplorerAlbiSoft\LakeXplorerBlazor\L
 C:\Users\ajete\OneDrive\Documents\GitHub\LakeXplorerAlbiSoft\LakeXplorerBlazor\LakeXplorerBlazor\obj\Debug\net7.0\LakeXplorerBlazor.genruntimeconfig.cache
 C:\Users\ajete\OneDrive\Documents\GitHub\LakeXplorerAlbiSoft\LakeXplorerBlazor\LakeXplorerBlazor\obj\Debug\net7.0\ref\LakeXplorerBlazor.dll
 C:\Users\ajete\OneDrive\Documents\GitHub\LakeXplorerAlbiSoft\LakeXplorerBlazor\LakeXplorerBlazor\bin\Debug\net7.0\CloudinaryDotNet.dll
+C:\Users\ajete\OneDrive\Documents\GitHub\LakeXplorerAlbiSoft\LakeXplorerBlazor\LakeXplorerBlazor\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll

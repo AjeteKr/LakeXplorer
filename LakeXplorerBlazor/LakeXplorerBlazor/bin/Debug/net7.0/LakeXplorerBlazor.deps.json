@@ -12,6 +12,7 @@
           "Intersoft.Crosslight": "6.0.5000.975",
           "Microsoft.AspNetCore.Authentication.Cookies": "2.2.0",
           "Microsoft.AspNetCore.Components": "7.0.12",
+          "Microsoft.AspNetCore.Components.Authorization": "7.0.10",
           "Microsoft.IdentityModel.Tokens": "7.0.3",
           "Newtonsoft.Json": "13.0.3",
           "System.Net.Http.Json": "7.0.1"
@@ -98,6 +99,18 @@
         }
       },
       "Microsoft.AspNetCore.Components.Analyzers/7.0.12": {},
+      "Microsoft.AspNetCore.Components.Authorization/7.0.10": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "7.0.12",
+          "Microsoft.AspNetCore.Components": "7.0.12"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Components.Authorization.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.1023.36439"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/2.2.0": {},
       "Microsoft.AspNetCore.DataProtection/2.2.0": {
         "dependencies": {
@@ -764,6 +777,13 @@
       "sha512": "sha512-4KrR8km+lOTRUsNVe4pumHUNvJK7UQUzVSqhTYXTz/wwU+eQ9TJ7QZn8xcrcbFCz6PzoG5esviCRC31mHAWBSQ==",
       "path": "microsoft.aspnetcore.components.analyzers/7.0.12",
       "hashPath": "microsoft.aspnetcore.components.analyzers.7.0.12.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Authorization/7.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fEplxrR0aDHJh9N1Ug35rRNNObaNhwvgSE+WDEbkXgWK7MT38hg5cJzqO8bkH4XVhQnRYPEHWHvrFsfzQF+wRQ==",
+      "path": "microsoft.aspnetcore.components.authorization/7.0.10",
+      "hashPath": "microsoft.aspnetcore.components.authorization.7.0.10.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/2.2.0": {
       "type": "package",

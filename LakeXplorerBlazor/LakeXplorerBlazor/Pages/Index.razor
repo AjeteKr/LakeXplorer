@@ -114,16 +114,22 @@ else
         LoadCurrentPage();
     }
 
+
     protected override async Task OnInitializedAsync()
     {
         var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
-        IsAuthenticated = authenticationState?.User?.Identity?.IsAuthenticated ?? false;
+        UpdateUsername(authenticationState);
+        Lakes = await ApiService.HttpGET<List<LakeDto>>("api/lakes");
+    }
 
+    private void UpdateUsername(AuthenticationState authenticationState)
+    {
+        IsAuthenticated = authenticationState?.User?.Identity?.IsAuthenticated ?? false;
         if (IsAuthenticated)
         {
             var user = authenticationState.User;
+
             Username = user.FindFirst(c => c.Type == ClaimTypes.Name)?.Value;
-            Lakes = await ApiService.HttpGET<List<LakeDto>>("api/lakes");
         }
     }
 }

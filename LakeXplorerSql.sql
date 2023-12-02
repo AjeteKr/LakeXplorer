@@ -12,6 +12,7 @@ CREATE TABLE Users (
 CREATE TABLE Lakes (
     Id INT PRIMARY KEY IDENTITY(1,1),
     Name NVARCHAR(100) NOT NULL,
+
 	CloudinaryAssetId NVARCHAR(100),
     Description NVARCHAR(1000)
 );
@@ -42,3 +43,12 @@ insert into Users (Email, Username, Password)
 VALUES ('user1@gmail.com', 'user1', 'user1123'),
        ('user2@gmail.com', 'user2', 'user2456');
 
+
+	   
+ALTER TABLE Lakes
+ADD ImageUrl VARCHAR(255);
+
+ALTER TABLE LakeSightings
+ADD ImageUrl VARCHAR(255);
+
+SELECT * from  Lakes;

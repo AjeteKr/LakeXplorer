@@ -52,14 +52,13 @@ namespace LakeXplorerBlazor.Pages
                     var tokenObject = await _authService.LoginAsync(Input.Username, Input.Password);
                     if (tokenObject != null)
                     {
-
                         var claimsIdentity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
                         claimsIdentity.AddClaim(new Claim("Token", tokenObject.Token));
+                        claimsIdentity.AddClaim(new Claim(ClaimTypes.Name, Input.Username)); 
                         var principal = new ClaimsPrincipal(claimsIdentity);
                         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
                         return LocalRedirect("~/");
                     }
-
                     TempData["ErrorMessage"] = "Wrong! Try again.";
                 }
                 return Page();
