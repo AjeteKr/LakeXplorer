@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorerblazor\\lakexplorerblazor\\pages\\createlakepage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|solutionrelative:lakexplorerblazor\\pages\\createlakepage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorerblazor\\lakexplorerblazor\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|solutionrelative:lakexplorerblazor\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorerblazor\\lakexplorerblazor\\data\\lakedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|solutionrelative:lakexplorerblazor\\data\\lakedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorerblazor\\lakexplorerblazor\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|solutionrelative:lakexplorerblazor\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,12 +11,28 @@
       "RelativeMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|solutionrelative:lakexplorerblazor\\services\\iapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorerblazor\\lakexplorerblazor\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|solutionrelative:lakexplorerblazor\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorerblazor\\lakexplorerblazor\\data\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|solutionrelative:lakexplorerblazor\\data\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorerblazor\\lakexplorerblazor\\data\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|solutionrelative:lakexplorerblazor\\data\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorerblazor\\lakexplorerblazor\\pages\\createlakepage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|solutionrelative:lakexplorerblazor\\pages\\createlakepage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorerblazor\\lakexplorerblazor\\data\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|solutionrelative:lakexplorerblazor\\data\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorerblazor\\lakexplorerblazor\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|solutionrelative:lakexplorerblazor\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorerblazor\\lakexplorerblazor\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{810392BF-41A8-444D-AA33-6A7AE88F68D5}|LakeXplorerBlazor\\LakeXplorerBlazor.csproj|solutionrelative:lakexplorerblazor\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,37 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ApiService.cs",
               "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Services\\ApiService.cs",
               "RelativeDocumentMoniker": "LakeXplorerBlazor\\Services\\ApiService.cs",
               "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Services\\ApiService.cs",
               "RelativeToolTip": "LakeXplorerBlazor\\Services\\ApiService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAwC8AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-01T19:21:40.209Z",
+              "WhenOpened": "2023-12-03T15:33:43.021Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Pages\\Index.razor",
-              "RelativeDocumentMoniker": "LakeXplorerBlazor\\Pages\\Index.razor",
-              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Pages\\Index.razor",
-              "RelativeToolTip": "LakeXplorerBlazor\\Pages\\Index.razor",
-              "ViewState": "AQIAAAgAAAAAzczMzMwwwB4AAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2023-11-27T13:05:05.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "IApiService.cs",
               "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Services\\IApiService.cs",
               "RelativeDocumentMoniker": "LakeXplorerBlazor\\Services\\IApiService.cs",
@@ -76,57 +67,83 @@
               "RelativeToolTip": "LakeXplorerBlazor\\Services\\IApiService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-01T19:26:27.802Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Pages\\Login.cshtml",
-              "RelativeDocumentMoniker": "LakeXplorerBlazor\\Pages\\Login.cshtml",
-              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Pages\\Login.cshtml",
-              "RelativeToolTip": "LakeXplorerBlazor\\Pages\\Login.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2023-12-01T19:20:13.869Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Data\\IAuthService.cs",
-              "RelativeDocumentMoniker": "LakeXplorerBlazor\\Data\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Data\\IAuthService.cs",
-              "RelativeToolTip": "LakeXplorerBlazor\\Data\\IAuthService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-01T14:14:19.547Z",
+              "WhenOpened": "2023-12-03T15:33:40.829Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LakeDto.cs",
-              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Data\\LakeDto.cs",
-              "RelativeDocumentMoniker": "LakeXplorerBlazor\\Data\\LakeDto.cs",
-              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Data\\LakeDto.cs",
-              "RelativeToolTip": "LakeXplorerBlazor\\Data\\LakeDto.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAUwAsAAAAeAAAA",
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Data\\AuthService.cs",
+              "RelativeDocumentMoniker": "LakeXplorerBlazor\\Data\\AuthService.cs",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Data\\AuthService.cs",
+              "RelativeToolTip": "LakeXplorerBlazor\\Data\\AuthService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAwBgAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-01T11:57:23.476Z",
+              "WhenOpened": "2023-12-03T15:32:11.695Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Data\\IAuthService.cs",
+              "RelativeDocumentMoniker": "LakeXplorerBlazor\\Data\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Data\\IAuthService.cs",
+              "RelativeToolTip": "LakeXplorerBlazor\\Data\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-03T15:31:33.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Data\\UserDto.cs",
+              "RelativeDocumentMoniker": "LakeXplorerBlazor\\Data\\UserDto.cs",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Data\\UserDto.cs",
+              "RelativeToolTip": "LakeXplorerBlazor\\Data\\UserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-03T14:32:51.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Pages\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "LakeXplorerBlazor\\Pages\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Pages\\Login.cshtml.cs",
+              "RelativeToolTip": "LakeXplorerBlazor\\Pages\\Login.cshtml.cs",
+              "ViewState": "AQIAAD0AAABgmZmZmZkhwEMAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-03T14:33:21.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Pages\\Login.cshtml",
+              "RelativeDocumentMoniker": "LakeXplorerBlazor\\Pages\\Login.cshtml",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Pages\\Login.cshtml",
+              "RelativeToolTip": "LakeXplorerBlazor\\Pages\\Login.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAFMAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-12-03T14:33:03.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CreateLakePage.razor",
               "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Pages\\CreateLakePage.razor",
               "RelativeDocumentMoniker": "LakeXplorerBlazor\\Pages\\CreateLakePage.razor",
               "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorerBlazor\\LakeXplorerBlazor\\Pages\\CreateLakePage.razor",
               "RelativeToolTip": "LakeXplorerBlazor\\Pages\\CreateLakePage.razor",
-              "ViewState": "AQIAAAIAAABQMDMzMzMbwBYAAAAAAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAYwGcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2023-11-26T19:21:36.911Z",
               "EditorCaption": ""

@@ -1,6 +1,7 @@
 ﻿using LakeXplorer.Context;
 using LakeXplorer.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace LakeXplorer.Repository
 {
@@ -10,11 +11,13 @@ namespace LakeXplorer.Repository
     {
 
         private readonly ApplicationDbContext _context;
+        private readonly ILogger<Repository<T>> _logger;
 
-        public Repository(ApplicationDbContext context)
+        public Repository(ApplicationDbContext context, ILogger<Repository<T>> logger)
 
         {
             _context = context;
+            _logger = logger;
 
         }
 
@@ -22,11 +25,17 @@ namespace LakeXplorer.Repository
         public async Task<T> Add(T entity)
         {
 
-            _context.Set<T>().Add(entity);
-
-            await _context.SaveChangesAsync();
-
-            return entity;
+            try
+            {
+                _context.Set<T>().Add(entity);
+                await _context.SaveChangesAsync();
+                return entity;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"An error occurred while adding entity to database: {ex.Message}");
+                throw;
+            }
         }
 
         // Delete an entity by its unique identifier and save changes.

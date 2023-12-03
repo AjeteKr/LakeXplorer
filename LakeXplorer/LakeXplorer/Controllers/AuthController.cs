@@ -22,11 +22,6 @@ namespace LakeXplorer.Controllers
             _repository = repository;
         }
 
-        /// <summary>
-        /// Registers a new user.
-        /// </summary>
-        /// <param name="user">The UserDto object containing user registration information.</param>
-        /// <returns>Returns 400 Bad Request if the model state is invalid, or if the user already exists. Returns 200 OK if registration is successful.</returns>
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserDto user) 
         {
@@ -51,12 +46,6 @@ namespace LakeXplorer.Controllers
             return Ok("User registered successfully.");
         }
 
-
-        /// <summary>
-        /// Logs in a user and generates a token.
-        /// </summary>
-        /// <param name="user">The LoginDto object containing user login information.</param>
-        /// <returns>Returns 400 Bad Request if the model state is invalid, or if the username or password is invalid. Returns a token if login is successful.</returns>
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto user) 
         {

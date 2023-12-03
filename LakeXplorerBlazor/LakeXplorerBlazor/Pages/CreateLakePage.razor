@@ -9,7 +9,7 @@
 
 <InputFile OnChange="@UploadToCloudinary" />
 
-<Form Model="@newLake"  OnValidSubmit="CreateLake">
+<Form Model="@newLake" OnValidSubmit="CreateLake">
     
     <div class="form-group">
         <label for="longitude">Name:</label>
@@ -63,11 +63,12 @@
                 Console.WriteLine($"Error: {uploadResult.Error.Message}");
                 return;
             }
-            if (uploadResult.SecureUri == null)
+            if (uploadResult.SecureUrl == null)
             {
-                Console.WriteLine("No SecureUri returned from Cloudinary.");
+                Console.WriteLine("No SecureUrl returned from Cloudinary.");
                 return;
             }
+
             newLake.CloudinaryAssetId = uploadResult.PublicId;
         }
     }
@@ -75,17 +76,27 @@
 
     private async Task CreateLake()
     {
-        var response = await apiService.HttpPOST<LakeDto>("api/Lakes/CreateLake", newLake);
-        if (response != null)
+        try
         {
-            Lakes.Add(response);
-            NavigationManager.NavigateTo("/");
+            var response = await apiService.HttpPOST<LakeDto>("api/Lakes/CreateLake", newLake);
+
+            if (response != null)
+            {
+                Lakes.Add(response);
+                NavigationManager.NavigateTo("/");
+            }
+            else
+            {
+                errorMessage = "Nuk u krijuar liqeni, ka ndodhur një gabim.";
+            }
         }
-        else
+        catch (Exception ex)
         {
-            errorMessage = "An error occurred while creating the lake.";
+            errorMessage = $"Gabim gjatë krijimit të liqenit: {ex.Message}";
         }
     }
+
+
 
 
 

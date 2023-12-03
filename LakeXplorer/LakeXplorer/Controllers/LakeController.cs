@@ -64,6 +64,7 @@ namespace LakeXplorer.Controllers
 
 
 
+
         [HttpPost("[action]")]
         public async Task<IActionResult> CreateLake([FromBody] LakeDto lake)
         {
@@ -78,13 +79,15 @@ namespace LakeXplorer.Controllers
                     Name = lake.Name,
                     CloudinaryAssetId = lake.CloudinaryAssetId,
                     Description = lake.Description,
-                    ImageUrl = $"https://res.cloudinary.com/djiicjy1v/image/upload/Lakes/{lake.CloudinaryAssetId}"
+                    ImageUrl = $"https://res.cloudinary.com/djiicjy1v/image/upload/v1701027229/Lakes/{lake.CloudinaryAssetId}.jpg\")\""
                 };
                 var createdLake = await _repository.Add(newLake);
+                _logger.LogInformation("New lake added to database successfully.");
                 return Ok(createdLake);
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "An error occurred while creating the lake.");
                 return StatusCode(500, "Internal Server Error: " + ex.Message);
             }
         }
