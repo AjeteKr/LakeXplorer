@@ -21,23 +21,23 @@ else
 {
     <h2>Available Lakes</h2>
     <div class="card-container">
+
         @foreach (var lake in Lakes)
         {
             <div class="card">
-
-
                 @if (!string.IsNullOrEmpty(lake.ImageUrl))
                 {
                     <img src="@lake.ImageUrl" alt="Lake Image" />
                 }
-
                 <div class="card-body">
                     <h3 class="card-title">@lake.Name</h3>
                     <p class="card-description">@lake.Description</p>
                     <a href="lake/@lake.Id">View Sightings</a>
+                    <button class="like-button">❤</button> <!-- Like button added here -->
                 </div>
             </div>
         }
+
     </div>
 }
 else
@@ -82,6 +82,16 @@ else
             font-size: 14px;
             color: #555555;
         }
+
+
+    .like-button {
+        background-color: transparent;
+        border: none;
+        color: rebeccapurple;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
     </style>
 
 

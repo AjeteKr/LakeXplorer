@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LakeXplorer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e48790df1728392cd455df34920ced61a47093f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+677fd202b40c086a4a668c22f2735526a414ab1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("LakeXplorer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LakeXplorer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

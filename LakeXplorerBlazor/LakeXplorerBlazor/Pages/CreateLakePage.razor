@@ -1,61 +1,49 @@
-﻿@page "/create-lake"
+﻿
+@page "/create-lake"
 @inject IApiService apiService
 @inject NavigationManager NavigationManager
 @using LakeXplorerBlazor.Data
 @using CloudinaryDotNet;
 @using CloudinaryDotNet.Actions;
 
+
 <h2>Create a New Lake</h2>
 
 <InputFile OnChange="@UploadToCloudinary" />
-
 <Form Model="@newLake" OnValidSubmit="CreateLake">
-    
     <div class="form-group">
         <label for="longitude">Name:</label>
         <InputText id="longitude" @bind-Value="newLake.Name" class="form-control" />
     </div>
-
     <div class="form-group">
         <label for="latitude">Description:</label>
         <InputText id="latitude" @bind-Value="newLake.Description" class="form-control" />
     </div>
-
     <button type="submit" class="btn btn-primary">Create Lake</button>
 </Form>
-
 @code {
-
     private Cloudinary cloudinary;
     private LakeDto newLake = new LakeDto();
     private List<LakeDto> Lakes = new List<LakeDto>();
     private string errorMessage = string.Empty;
-
-   
-
-
     protected override void OnInitialized()
     {
         Account account = new Account(
-                "djiicjy1v",
-                "417365291149721",
-                "g32YBH42nhxvoL4654d9sqBEpKk"
-            );
-
+            "djiicjy1v",
+            "417365291149721",
+            "g32YBH42nhxvoL4654d9sqBEpKk"
+        );
         cloudinary = new Cloudinary(account);
     }
-
-
-
     private async Task UploadToCloudinary(InputFileChangeEventArgs e)
     {
         using (var stream = e.File.OpenReadStream())
         {
             var uploadParams = new ImageUploadParams()
-                {
-                    File = new FileDescription(e.File.Name, stream),
-                    Folder = "Lakes"
-                };
+            {
+                File = new FileDescription(e.File.Name, stream),
+                Folder = "Lakes"
+            };
             var uploadResult = await cloudinary.UploadAsync(uploadParams);
             Console.WriteLine(uploadResult);
             if (uploadResult.Error != null)
@@ -68,18 +56,14 @@
                 Console.WriteLine("No SecureUrl returned from Cloudinary.");
                 return;
             }
-
             newLake.CloudinaryAssetId = uploadResult.PublicId;
         }
     }
-
-
     private async Task CreateLake()
     {
         try
         {
             var response = await apiService.HttpPOST<LakeDto>("api/Lakes/CreateLake", newLake);
-
             if (response != null)
             {
                 Lakes.Add(response);

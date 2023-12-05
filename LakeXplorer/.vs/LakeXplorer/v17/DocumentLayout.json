@@ -46,8 +46,7 @@
               "RelativeToolTip": "LakeXplorer\\Security\\TokenService.cs",
               "ViewState": "AQIAACMAAAAAAAAAAAAQwDoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-05T12:19:08.033Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-05T12:19:08.033Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "LakeXplorer\\Controllers\\AuthController.cs",
               "ViewState": "AQIAACsAAAAAAAAAAAAQwEIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-05T12:18:14.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-05T12:18:14.713Z"
             },
             {
               "$type": "Document",
@@ -72,8 +70,7 @@
               "RelativeToolTip": "LakeXplorer\\Controllers\\UserController.cs",
               "ViewState": "AQIAAFgAAAAAAAAAAAAgwHAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-05T12:17:32.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-05T12:17:32.854Z"
             },
             {
               "$type": "Document",
@@ -85,8 +82,7 @@
               "RelativeToolTip": "LakeXplorer\\Models\\LakeSightings.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAswBcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-05T11:51:21.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-05T11:51:21.943Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "LakeXplorer\\Controllers\\LakeController.cs",
               "ViewState": "AQIAAGkAAADAmZmZmZkrwH4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-01T18:48:38.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-01T18:48:38.298Z"
             }
           ]
         }
