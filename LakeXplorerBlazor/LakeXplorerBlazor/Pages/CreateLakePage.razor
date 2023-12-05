@@ -87,17 +87,12 @@
             }
             else
             {
-                errorMessage = "Nuk u krijuar liqeni, ka ndodhur një gabim.";
+                errorMessage = "The lake was not created, an error occurred.";
             }
         }
         catch (Exception ex)
         {
-            errorMessage = $"Gabim gjatë krijimit të liqenit: {ex.Message}";
+            errorMessage = $"Error creating lake: {ex.Message}";
         }
     }
-
-
-
-
-
 }

@@ -1,41 +1,32 @@
-﻿@page "/lake/{LakeId}/create-sighting"
-@inject HttpClient HttpClient
-@inject NavigationManager NavigationManager
+﻿@page "/lake-sightings"
+@inject IApiService apiService
 @using LakeXplorerBlazor.Data
 
-<h2>Create a New Sighting for Lake ID: @LakeId</h2>
 
-<EditForm Model="@newSighting" OnValidSubmit="CreateSighting">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
-
-    <!-- Input fields for Longitude, Latitude, Image URL, Fun Fact -->
-    <!-- ... -->
-
-    <button type="submit" class="btn btn-primary">Create Sighting</button>
-</EditForm>
-
+@foreach (var sighting in Sightings)
+{
+    <div>
+        <h2>@sighting.Id</h2>
+        <button @onclick="() => LikeSighting(sighting.Id)">Like</button>
+    </div>
+}
 @code {
-    [Parameter]
-    public int LakeId { get; set; }
-    private LakeSightingDto newSighting = new LakeSightingDto();
-
-    private async Task CreateSighting()
+    private List<LakeSightingDto> Sightings = new List<LakeSightingDto>();
+    private string errorMessage = string.Empty;
+    protected override async Task OnInitializedAsync()
     {
-        // Set LakeId for the new sighting
-        newSighting.LakeId = LakeId;
-
-        // Send POST request to API to create the sighting
-        var response = await HttpClient.PostAsJsonAsync("api/lake-sightings", newSighting);
-        if (response.IsSuccessStatusCode)
+        Sightings = await apiService.HttpGET<List<LakeSightingDto>>("api/LakeSightings");
+    }
+    private async Task LikeSighting(int sightingId)
+    {
+        var response = await apiService.HttpPOST<string>($"api/LakeSightings/like/{sightingId}", null);
+        if (response != null)
         {
-            // Redirect to lake sightings page after successful creation
-            NavigationManager.NavigateTo($"/lake/{LakeId}/sightings");
+            // Handle successful like
         }
         else
         {
-            // Handle creation error
-            // You can show an error message to the user
+            errorMessage = "An error occurred while liking the sighting.";
         }
     }
 }

@@ -42,6 +42,7 @@ namespace LakeXplorer.Controllers
 
             return Ok(sighting);
         }
+
         [HttpGet("image/{cloudinaryAssetId}")]
         public async Task<IActionResult> GetImageByCloudinaryAssetId(string cloudinaryAssetId)
         {
@@ -78,7 +79,7 @@ namespace LakeXplorer.Controllers
             {
                 var uploadParams = new ImageUploadParams()
                 {
-                    Folder = "newSighting.Image"
+                    Folder = "LakeSighting"
                 };
 
                 var uploadResult = await cloudinary.UploadAsync(uploadParams);
@@ -93,6 +94,27 @@ namespace LakeXplorer.Controllers
                 return StatusCode(500, "Internal Server Error: " + ex.Message);
             }
         }
+
+
+        //[HttpPost("like/{sightingId}")]
+        //public async Task<IActionResult> LikeSighting(int sightingId)
+        //{
+        //    try
+        //    {
+        //        int userId = GetUserLoggedInId(); 
+
+        //        var like = new Likes { UserId = userId, SightingId = sightingId };
+        //        await _repository.Add(like);
+
+        //        return Ok();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError(ex, "Error liking lake sighting.");
+        //        return StatusCode(500, "Internal Server Error: " + ex.Message);
+        //    }
+        //}
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteLakeSighting(int id)

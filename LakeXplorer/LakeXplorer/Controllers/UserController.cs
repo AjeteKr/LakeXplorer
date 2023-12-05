@@ -22,12 +22,6 @@ namespace LakeXplorer.Controllers
             _repository = repository;
         }
 
-        /// <summary>
-        /// Retrieves a user by their ID.
-        /// </summary>
-        /// <param name="id">The ID of the user to retrieve.</param>
-        /// <param name="token">A cancellation token.</param>
-        /// <returns>Returns 404 Not Found if the user does not exist, or 200 OK with the user information if found.</returns>
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser(int id, CancellationToken token)
@@ -42,11 +36,6 @@ namespace LakeXplorer.Controllers
             return Ok(user);
         }
 
-        /// <summary>
-        /// Creates a new user with the provided data.
-        /// </summary>
-        /// <param name="newUser">The Users object containing user data to create.</param>
-        /// <returns>Returns 400 Bad Request if the user data is invalid, or 201 Created with the created user information if successful. Returns 500 Internal Server Error if an exception occurs.</returns>
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] Users newUser)
         {
@@ -68,11 +57,6 @@ namespace LakeXplorer.Controllers
         }
 
 
-        /// <summary>
-        /// Deletes a user by their ID.
-        /// </summary>
-        /// <param name="id">The ID of the user to delete.</param>
-        /// <returns>Returns 204 No Content if the user is successfully deleted. Returns 500 Internal Server Error if an exception occurs.</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
@@ -95,12 +79,6 @@ namespace LakeXplorer.Controllers
         }
 
 
-        /// <summary>
-        /// Updates an existing user with the provided data.
-        /// </summary>
-        /// <param name="id">The ID of the user to update.</param>
-        /// <param name="updatedUser">The Users object containing updated user data.</param>
-        /// <returns>Returns 400 Bad Request if the user data is invalid, 404 Not Found if the user does not exist, or 200 OK with the updated user information if successful. Returns 500 Internal Server Error if an exception occurs.</returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(int id, [FromBody] Users updatedUser)
         {
