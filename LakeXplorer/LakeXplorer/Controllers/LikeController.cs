@@ -21,11 +21,6 @@ namespace LakeXplorer.Controllers
         }
 
 
-        /// <summary>
-        /// Retrieves likes by their ID.
-        /// </summary>
-        /// <param name="id">The ID of the likes to retrieve.</param>
-        /// <returns>Returns 404 Not Found if the likes do not exist, or 200 OK with the likes information if found.</returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetLikes(int id)
         {
@@ -38,11 +33,6 @@ namespace LakeXplorer.Controllers
             return Ok(likes);
         }
 
-        /// <summary>
-        /// Creates a new likes entity with the provided data.
-        /// </summary>
-        /// <param name="newLikes">The Likes object containing likes data to create.</param>
-        /// <returns>Returns 400 Bad Request if the data is invalid, or 201 Created with the created likes information if successful. Returns 500 Internal Server Error if an exception occurs.</returns>
         [HttpPost]
         public async Task<IActionResult> CreateLikes([FromBody] Likes newLikes)
         {
@@ -63,11 +53,6 @@ namespace LakeXplorer.Controllers
             }
         }
 
-        /// <summary>
-        /// Deletes likes by their ID.
-        /// </summary>
-        /// <param name="id">The ID of the likes to delete.</param>
-        /// <returns>Returns 204 No Content if the likes are successfully deleted. Returns 500 Internal Server Error if an exception occurs.</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteLikes(int id)
         {
@@ -88,13 +73,6 @@ namespace LakeXplorer.Controllers
                 return StatusCode(500, "Internal Server Error: " + ex.Message);
             }
         }
-
-        /// <summary>
-        /// Updates an existing likes entity with the provided data.
-        /// </summary>
-        /// <param name="id">The ID of the likes to update.</param>
-        /// <param name="updatedLikes">The Likes object containing updated likes data.</param>
-        /// <returns>Returns 400 Bad Request if the data is invalid, 404 Not Found if the likes do not exist, or 200 OK with the updated likes information if successful. Returns 500 Internal Server Error if an exception occurs.</returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateLikes(int id, [FromBody] Likes updatedLikes)
         {
@@ -123,5 +101,58 @@ namespace LakeXplorer.Controllers
                 return StatusCode(500, "Internal Server Error: " + ex.Message);
             }
         }
+
+        [HttpPost("{userId}/{sightingId}")]
+        public async Task<IActionResult> CreateLikes(int userId, int sightingId)
+        {
+            try
+            {
+                Likes newLikes = new Likes { UserId = userId, SightingId = sightingId };
+                var createdLikes = await _repository.Add(newLikes);
+                return CreatedAtAction(nameof(GetLikes), new { id = createdLikes.Id }, createdLikes);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error creating likes.");
+                return StatusCode(500, "Internal Server Error: " + ex.Message);
+            }
+        }
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetLikesForUser(int userId)
+        {
+            try
+            {
+                var likesForUser = await _repository.GetLikesForUser(userId);
+                return Ok(likesForUser);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting likes for user.");
+                return StatusCode(500, "Internal Server Error: " + ex.Message);
+            }
+        }
+
+        //[HttpPut("update-like-status/{lakeId}")]
+        //public async Task<IActionResult> UpdateLikeStatus(int lakeId, [FromBody] bool isLiked)
+        //{
+        //    try
+        //    {
+        //        var existingLike = await _repository.Get(lakeId, default);
+        //        if (existingLike == null)
+        //        {
+        //            return NotFound("Like not found.");
+        //        }
+        //        existingLike.IsLiked = isLiked;
+        //        _repository.Update(existingLike);
+        //        return Ok(existingLike);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError(ex, "Error updating like status.");
+        //        return StatusCode(500, "Internal Server Error: " + ex.Message);
+        //    }
+        //}
+
+
     }
 }

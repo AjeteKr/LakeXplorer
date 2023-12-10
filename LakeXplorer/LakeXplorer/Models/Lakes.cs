@@ -18,5 +18,7 @@ namespace LakeXplorer.Models
 
         [Required]
         public string ImageUrl { get; set; }
+        //public bool IsLiked { get; set; }
+
     }
 }

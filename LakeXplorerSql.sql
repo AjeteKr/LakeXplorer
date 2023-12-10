@@ -12,9 +12,9 @@ CREATE TABLE Users (
 CREATE TABLE Lakes (
     Id INT PRIMARY KEY IDENTITY(1,1),
     Name NVARCHAR(100) NOT NULL,
-
 	CloudinaryAssetId NVARCHAR(100),
-    Description NVARCHAR(1000)
+    Description NVARCHAR(1000),
+	ImageUrl VARCHAR(255)
 );
 
 CREATE TABLE LakeSightings (
@@ -26,7 +26,8 @@ CREATE TABLE LakeSightings (
 	CloudinaryAssetId NVARCHAR(100),
     FunFact NVARCHAR(1000),
     FOREIGN KEY (UserId) REFERENCES Users(Id),
-    FOREIGN KEY (LakeId) REFERENCES Lakes(Id)
+    FOREIGN KEY (LakeId) REFERENCES Lakes(Id),
+	ImageUrl VARCHAR(255)
 );
 
 CREATE TABLE Likes (
@@ -43,12 +44,8 @@ insert into Users (Email, Username, Password)
 VALUES ('user1@gmail.com', 'user1', 'user1123'),
        ('user2@gmail.com', 'user2', 'user2456');
 
+ALTER TABLE Lakes
+ADD IsLiked BIT;
 
 	   
-ALTER TABLE Lakes
-ADD ImageUrl VARCHAR(255);
-
-ALTER TABLE LakeSightings
-ADD ImageUrl VARCHAR(255);
-
-SELECT * from  Lakes;
+SELECT * from Lakes;

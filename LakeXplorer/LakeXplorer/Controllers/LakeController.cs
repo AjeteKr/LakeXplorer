@@ -79,7 +79,7 @@ namespace LakeXplorer.Controllers
                     Name = lake.Name,
                     CloudinaryAssetId = lake.CloudinaryAssetId,
                     Description = lake.Description,
-                    ImageUrl = $"https://res.cloudinary.com/djiicjy1v/image/upload/v1701027229/Lakes/{lake.CloudinaryAssetId}.jpg\")\""
+                    ImageUrl = $"https://res.cloudinary.com/djiicjy1v/image/upload/v1701027229/{lake.CloudinaryAssetId}.jpg"
                 };
                 var createdLake = await _repository.Add(newLake);
                 _logger.LogInformation("New lake added to database successfully.");

@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorer\\lakexplorer\\dtos\\lakedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|solutionrelative:lakexplorer\\dtos\\lakedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorer\\lakexplorer\\models\\lakes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|solutionrelative:lakexplorer\\models\\lakes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorer\\lakexplorer\\controllers\\lakecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|solutionrelative:lakexplorer\\controllers\\lakecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorer\\lakexplorer\\controllers\\likecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|solutionrelative:lakexplorer\\controllers\\likecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorer\\lakexplorer\\models\\likes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|solutionrelative:lakexplorer\\models\\likes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorer\\lakexplorer\\dtos\\likedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|solutionrelative:lakexplorer\\dtos\\likedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorer\\lakexplorer\\controllers\\lakesightingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|solutionrelative:lakexplorer\\controllers\\lakesightingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorer\\lakexplorer\\models\\lakesightings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|solutionrelative:lakexplorer\\models\\lakesightings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|c:\\users\\ajete\\onedrive\\documents\\github\\lakexploreralbisoft\\lakexplorer\\lakexplorer\\controllers\\lakecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F279BE5-1D2C-4939-AEA7-827F059400D1}|LakeXplorer\\LakeXplorer.csproj|solutionrelative:lakexplorer\\controllers\\lakecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,47 +54,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Security\\TokenService.cs",
-              "RelativeDocumentMoniker": "LakeXplorer\\Security\\TokenService.cs",
-              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Security\\TokenService.cs",
-              "RelativeToolTip": "LakeXplorer\\Security\\TokenService.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAQwDoAAAABAAAA",
+              "Title": "Lakes.cs",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Models\\Lakes.cs",
+              "RelativeDocumentMoniker": "LakeXplorer\\Models\\Lakes.cs",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Models\\Lakes.cs",
+              "RelativeToolTip": "LakeXplorer\\Models\\Lakes.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAADwvxQAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-05T12:19:08.033Z"
+              "WhenOpened": "2023-12-10T19:42:05.38Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "LakeXplorer\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "LakeXplorer\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAQwEIAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "LakeDto.cs",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\DTOs\\LakeDto.cs",
+              "RelativeDocumentMoniker": "LakeXplorer\\DTOs\\LakeDto.cs",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\DTOs\\LakeDto.cs",
+              "RelativeToolTip": "LakeXplorer\\DTOs\\LakeDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-05T12:18:14.713Z"
+              "WhenOpened": "2023-12-10T19:41:51.658Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "LakeXplorer\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\UserController.cs",
-              "RelativeToolTip": "LakeXplorer\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAgwHAAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "LikeDto.cs",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\DTOs\\LikeDto.cs",
+              "RelativeDocumentMoniker": "LakeXplorer\\DTOs\\LikeDto.cs",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\DTOs\\LikeDto.cs",
+              "RelativeToolTip": "LakeXplorer\\DTOs\\LikeDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-05T12:17:32.854Z"
+              "WhenOpened": "2023-12-10T18:50:54.366Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Likes.cs",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Models\\Likes.cs",
+              "RelativeDocumentMoniker": "LakeXplorer\\Models\\Likes.cs",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Models\\Likes.cs",
+              "RelativeToolTip": "LakeXplorer\\Models\\Likes.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-10T18:34:25.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "LakeSightings.cs",
               "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Models\\LakeSightings.cs",
               "RelativeDocumentMoniker": "LakeXplorer\\Models\\LakeSightings.cs",
@@ -86,28 +122,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "LakeSightingController.cs",
               "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\LakeSightingController.cs",
               "RelativeDocumentMoniker": "LakeXplorer\\Controllers\\LakeSightingController.cs",
               "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\LakeSightingController.cs",
               "RelativeToolTip": "LakeXplorer\\Controllers\\LakeSightingController.cs",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAAAHMAAAALAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAwwF8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2023-12-05T11:42:28.604Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "LakeController.cs",
               "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\LakeController.cs",
               "RelativeDocumentMoniker": "LakeXplorer\\Controllers\\LakeController.cs",
               "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\LakeController.cs",
               "RelativeToolTip": "LakeXplorer\\Controllers\\LakeController.cs",
-              "ViewState": "AQIAAGkAAADAmZmZmZkrwH4AAAAAAAAA",
+              "ViewState": "AQIAAGoAAACAZWZmZmYGwDkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-01T18:48:38.298Z"
+              "WhenOpened": "2023-12-01T18:48:38.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LikeController.cs",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\LikeController.cs",
+              "RelativeDocumentMoniker": "LakeXplorer\\Controllers\\LikeController.cs",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\LikeController.cs",
+              "RelativeToolTip": "LakeXplorer\\Controllers\\LikeController.cs",
+              "ViewState": "AQIAAIUAAAAAAAAAAAAcwJsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-10T13:18:55.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "LakeXplorer\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\UserController.cs",
+              "RelativeToolTip": "LakeXplorer\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAgwHAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-05T12:17:32.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "LakeXplorer\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "LakeXplorer\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAQwEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-05T12:18:14.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Security\\TokenService.cs",
+              "RelativeDocumentMoniker": "LakeXplorer\\Security\\TokenService.cs",
+              "ToolTip": "C:\\Users\\ajete\\OneDrive\\Documents\\GitHub\\LakeXplorerAlbiSoft\\LakeXplorer\\LakeXplorer\\Security\\TokenService.cs",
+              "RelativeToolTip": "LakeXplorer\\Security\\TokenService.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAQwDoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-05T12:19:08.033Z"
             }
           ]
         }

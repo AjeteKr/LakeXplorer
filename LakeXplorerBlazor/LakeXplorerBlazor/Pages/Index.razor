@@ -33,7 +33,10 @@ else
                     <h3 class="card-title">@lake.Name</h3>
                     <p class="card-description">@lake.Description</p>
                     <a href="lake/@lake.Id">View Sightings</a>
-                    <button class="like-button">❤</button> <!-- Like button added here -->
+
+
+
+                    <button class="like-button @(lake.IsLiked ? "liked" : "")" @onclick="() => ToggleLike(lake)">❤</button>
                 </div>
             </div>
         }
@@ -84,15 +87,26 @@ else
         }
 
 
+
     .like-button {
+        position: absolute;
+        bottom: 20px; /* Adjust this value to move the icon up or down */
+        right: 10px;
         background-color: transparent;
         border: none;
-        color: rebeccapurple;
+        color: gray; /* Default color */
         cursor: pointer;
-        font-size: 20px;
+        font-size: 30px; /* Adjust this value to make the icon bigger */
     }
 
+        .like-button.liked {
+            color: rebeccapurple; /* Color when liked */
+        }
+
+
+
     </style>
+
 
 
 @code {
@@ -102,16 +116,23 @@ else
     private List<LakeDto> Lakes;
     private int PageSize = 9;
     private int CurrentPage = 1;
-
-
+    private async Task ToggleLike(LakeDto lake)
+    {
+        var previousLikeStatus = lake.IsLiked;
+        lake.IsLiked = !lake.IsLiked;
+        var result = await ApiService.UpdateLikeStatus(lake.Id, lake.IsLiked);
+        if (!result)
+        {
+            lake.IsLiked = previousLikeStatus;
+        }
+    }
     protected override void OnInitialized()
     {
         Account account = new Account(
-                "djiicjy1v",
-                "417365291149721",
-                "g32YBH42nhxvoL4654d9sqBEpKk"
-            );
-
+            "djiicjy1v",
+            "417365291149721",
+            "g32YBH42nhxvoL4654d9sqBEpKk"
+        );
         cloudinary = new Cloudinary(account);
     }
     private void LoadCurrentPage()
@@ -123,22 +144,18 @@ else
         CurrentPage = newPage;
         LoadCurrentPage();
     }
-
-
     protected override async Task OnInitializedAsync()
     {
         var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
         UpdateUsername(authenticationState);
         Lakes = await ApiService.HttpGET<List<LakeDto>>("api/lakes");
     }
-
     private void UpdateUsername(AuthenticationState authenticationState)
     {
         IsAuthenticated = authenticationState?.User?.Identity?.IsAuthenticated ?? false;
         if (IsAuthenticated)
         {
             var user = authenticationState.User;
-
             Username = user.FindFirst(c => c.Type == ClaimTypes.Name)?.Value;
         }
     }

@@ -80,5 +80,22 @@ namespace LakeXplorer.Repository
         {
             return await _context.Users.FirstOrDefaultAsync(u => u.Username == username && u.Password == password);
         }
+        public async Task<List<Likes>> GetLikesForUser(int userId)
+        {
+            try
+            {
+                var likesForUser = await _context.Set<Likes>()
+                    .Where(like => like.UserId == userId)
+                    .ToListAsync();
+
+                return likesForUser;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"An error occurred while getting likes for user with ID {userId}: {ex.Message}");
+                throw;
+            }
+        }
+
     }
 }

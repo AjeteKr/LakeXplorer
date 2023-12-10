@@ -19,5 +19,7 @@ namespace LakeXplorer.Repository
 
         Task<Users?> GetUserByUsernameAndPassword(string username, string password);
 
+        Task<List<Likes>> GetLikesForUser(int userId);
+
     }
 }
