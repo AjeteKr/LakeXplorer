@@ -33,9 +33,6 @@ else
                     <h3 class="card-title">@lake.Name</h3>
                     <p class="card-description">@lake.Description</p>
                     <a href="lake/@lake.Id">View Sightings</a>
-
-
-
                     <button class="like-button @(lake.IsLiked ? "liked" : "")" @onclick="() => ToggleLike(lake)">❤</button>
                 </div>
             </div>
@@ -47,9 +44,6 @@ else
 {
     <p>No lakes available. Check back later for updates.</p>
 }
-
-
-
     <style>
         .card-container {
             display: flex;
@@ -116,6 +110,7 @@ else
     private List<LakeDto> Lakes;
     private int PageSize = 9;
     private int CurrentPage = 1;
+
     private async Task ToggleLike(LakeDto lake)
     {
         var previousLikeStatus = lake.IsLiked;
@@ -126,6 +121,7 @@ else
             lake.IsLiked = previousLikeStatus;
         }
     }
+
     protected override void OnInitialized()
     {
         Account account = new Account(
@@ -135,26 +131,31 @@ else
         );
         cloudinary = new Cloudinary(account);
     }
+
     private void LoadCurrentPage()
     {
         Lakes = Lakes.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
     }
+
     private void OnPageChange(int newPage)
     {
         CurrentPage = newPage;
         LoadCurrentPage();
     }
+
     protected override async Task OnInitializedAsync()
     {
         var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
         UpdateUsername(authenticationState);
         Lakes = await ApiService.HttpGET<List<LakeDto>>("api/lakes");
     }
+
     private void UpdateUsername(AuthenticationState authenticationState)
     {
         IsAuthenticated = authenticationState?.User?.Identity?.IsAuthenticated ?? false;
         if (IsAuthenticated)
         {
+
             var user = authenticationState.User;
             Username = user.FindFirst(c => c.Type == ClaimTypes.Name)?.Value;
         }

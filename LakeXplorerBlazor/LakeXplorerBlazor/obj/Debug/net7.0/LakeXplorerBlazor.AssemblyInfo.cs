@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LakeXplorerBlazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b1499d94ea8185a39896dc723f6dadd2ee1cfbc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("LakeXplorerBlazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LakeXplorerBlazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
