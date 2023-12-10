@@ -2,7 +2,6 @@
 
 namespace LakeXplorerBlazor.Data
 {
-    // Represents a Data Transfer Object (DTO) for user registration and authentication.
     public class UserDto
     {
         [Required(ErrorMessage = "Email is required")]

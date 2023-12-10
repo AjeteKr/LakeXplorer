@@ -31,7 +31,6 @@ namespace LakeXplorerBlazor
             return default;
         }
 
-
         public async Task<bool> UpdateLikeStatus(int lakeId, bool isLiked)
         {
             try
