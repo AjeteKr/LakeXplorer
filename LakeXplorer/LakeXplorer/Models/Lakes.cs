@@ -5,8 +5,6 @@ namespace LakeXplorer.Models
     // Represents information about a lake.
     public class Lakes : BaseModels
     {
-
-        // Gets or sets the name of the lake.
         [Required]
         public string Name { get; set; }
 

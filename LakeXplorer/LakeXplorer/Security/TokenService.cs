@@ -8,7 +8,6 @@ using System.Security.Cryptography;
 namespace LakeXplorer.Security;
 public class TokenService
 {
-    // A static key for signing and verifying JWT tokens
     public static SymmetricSecurityKey SigningKey = new SymmetricSecurityKey(Generate256BitKey());
     private readonly int _tokenExpirationInMinutes;
 
@@ -17,18 +16,16 @@ public class TokenService
         _tokenExpirationInMinutes = tokenExpirationInMinutes;
     }
 
-    // Generates a 256-bit random key
     public static byte[] Generate256BitKey()
     {
         using (var randomNumberGenerator = RandomNumberGenerator.Create())
         {
-            var key = new byte[32]; // 256 bitë (32 bajtë)
+            var key = new byte[32]; 
             randomNumberGenerator.GetBytes(key);
             return key;
         }
     }
 
-    // Generates a JWT token for the given username
     public string GenerateToken(string username)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
@@ -46,7 +43,6 @@ public class TokenService
     }
 
 
-    // Generates a random secret key with the specified size
     public string GenerateRandomSecretKey(int keySize)
     {
         using (var randomNumberGenerator = RandomNumberGenerator.Create())

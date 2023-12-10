@@ -1,7 +1,6 @@
 ﻿namespace LakeXplorer.DTOs
 {
 
-    // Data Transfer Object for representing a lake sighting.
     public class LakeSightingDto
     {
         public int Id { get; set; }

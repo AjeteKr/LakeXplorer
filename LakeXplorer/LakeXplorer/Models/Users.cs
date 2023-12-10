@@ -5,9 +5,6 @@ namespace LakeXplorer.Models
 {
     public class Users : BaseModels
     {
-
-
-        // Represents a user in the system.
         [Required]
         public string Email { get; set; }
 

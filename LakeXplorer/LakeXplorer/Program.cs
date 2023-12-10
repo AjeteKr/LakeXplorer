@@ -15,8 +15,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>)); // Add scoped repository services
-builder.Services.AddSingleton(new TokenService(60)); // Add a singleton TokenService with a token expiration of 60 minutes
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>)); 
+builder.Services.AddSingleton(new TokenService(60)); 
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>

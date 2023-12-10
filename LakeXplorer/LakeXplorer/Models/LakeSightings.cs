@@ -15,8 +15,6 @@ namespace LakeXplorer.Models
         [Required]
         public string CloudinaryAssetId { get; set; }
 
-
-
         [Required]
         public string ImageUrl { get; set; }
         [Required]

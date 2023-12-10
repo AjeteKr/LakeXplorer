@@ -2,8 +2,6 @@
 
 namespace LakeXplorer.Repository
 {
-
-    // Generic repository interface for interacting with entities
     public interface IRepository<T> 
 
     {

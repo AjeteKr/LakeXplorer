@@ -3,8 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LakeXplorer.Models
 {
-
-    // Represents a user's like on a lake sighting.
     public class Likes : BaseModels
     {
 
