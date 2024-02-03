@@ -22,10 +22,7 @@ LakeXplorer is a web application that allows users to discover different lakes, 
   - Not logged-in users can log in and request an authentication token.
   - Users can see a list of lakes.
   - Users can see sightings for a specific lake.
-  - Logged-in users can create a lake sighting.
-  - Logged-in users can like a lake sighting.
-  - Logged-in users can delete their lake sightings and likes.
-
+ 
 ## Installation and Setup
 1. Clone this repository.
 2. Ensure you have the .NET SDK and Visual Studio (or any code editor) installed.
