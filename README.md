@@ -1,4 +1,4 @@
-# LakeXplorerAlbiSoft
+# LakeXplorer
 
 LakeXplorer is a web application that allows users to discover different lakes, view lake details, and share their lake sightings. It provides features for user registration, authentication using JWT tokens, and interacting with the API.
 
